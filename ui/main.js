@@ -6,9 +6,9 @@ element.innerHTML = 'New value';
 
 //move the image
 var img=document.getElementById('Img');
-var maarginLeft = 0;
+var marginLeft = 0;
 function moveRight(){
-    marginLeft = marginLeft + 'px';
+    marginLeft = marginLeft + 10;
     img.style.marginLeft - marginLeft +'px';
 }
 img.onclick = function(){
