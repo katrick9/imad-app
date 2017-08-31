@@ -8,10 +8,11 @@ button.onclick = function () {
         if(request.readyState == XMLHttpRequest.DONE){
             if(request.status == 200){
                //submit names
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit =  document.getElementById('submit');
 submit.onclick = function(){
+    var nameInput = document.getElementById('name');
+var name = nameInput.value;
     var names = request.responseText;
     names = JSON.parse(names);
     var list = '';
@@ -24,7 +25,7 @@ submit.onclick = function(){
         }
     };
     //make a request
-    request.open('GET','http://rockstarkatrick.imad.hasura-app.io/counter',true);
+    request.open('GET','http://rockstarkatrick.imad.hasura-app.io/submit-name?name'+ name ,true);
     request.send(null);
     
 };
