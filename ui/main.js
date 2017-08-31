@@ -11,8 +11,7 @@ button.onclick = function () {
 
 var submit =  document.getElementById('submit');
 submit.onclick = function(){
-    var nameInput = document.getElementById('name');
-var name = nameInput.value;
+   
     var names = request.responseText;
     names = JSON.parse(names);
     var list = '';
@@ -24,6 +23,8 @@ var name = nameInput.value;
             }
         }
     };
+     var nameInput = document.getElementById('name');
+var name = nameInput.value;
     //make a request
     request.open('GET','http://rockstarkatrick.imad.hasura-app.io/submit-name?name'+ name ,true);
     request.send(null);
